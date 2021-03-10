@@ -7,8 +7,6 @@ node() {
       )
   }
   stage('Deploy') {
-    gctsDeploy(
-        script: this
-      )
+    gctsDeploy script: this
   }
 }
