@@ -1,6 +1,6 @@
 general:
   set verbose: true
-stage:
+steps:
   gctsDeploy:
         host: 'phlhdr07.phl.sap.corp:8001',
         client: '200',
