@@ -2,9 +2,7 @@
 
 node() {
   stage('Prepare'){
-  setupCommonPipelineEnvironment(
-        script: this
-      )
+  setupCommonPipelineEnvironment script: this
   }
   stage('Deploy') {
     gctsDeploy script: this
