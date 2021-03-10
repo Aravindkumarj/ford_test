@@ -3,6 +3,7 @@
 node() {
   stage('Prepare'){
   setupCommonPipelineEnvironment script: this
+  echo 'complete'
   }
   stage('Deploy') {
     gctsDeploy script: this
