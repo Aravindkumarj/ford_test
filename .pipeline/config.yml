@@ -3,4 +3,4 @@ steps:
     host: 'http://phlhdr07.phl.sap.corp:8001'
     client: '200'
     abapCredentialsId: 'ABAPUserPasswordCredentialsId'
-    repository: 'fordtest2'
+    repository: 'ford-qas'
