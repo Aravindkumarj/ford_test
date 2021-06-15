@@ -1,0 +1,11 @@
+  method WITHDRAW.
+*    IF BALANCE >= AMOUNT.
+*      BALANCE = BALANCE - AMOUNT.
+*      NEW_BALANCE = BALANCE.
+*    ELSE.
+*      RAISE INSUFFICIENT_FUNDS.
+*    ENDIF.
+
+    BALANCE = BALANCE - AMOUNT.
+    NEW_BALANCE = BALANCE.
+  endmethod.
