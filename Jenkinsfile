@@ -16,4 +16,14 @@ node() {
         repository: 'fordtest3'
       )
   }
+  stage('Unit Test'){
+    gctsExecuteABAPUnitTests(
+      script: this,
+      host: 'http://phlhdr07.phl.sap.corp:8011',
+        client: '200',
+        username: 'I058626',
+        password: 'Rsbdcos0',
+        repository: 'fordtest3'
+      }
+   } 
 }
