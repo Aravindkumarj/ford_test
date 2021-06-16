@@ -15,7 +15,7 @@ node() {
         password: 'Rsbdcos0',
         repository: 'fordtest3',
         remoteRepositoryURL: 'https://github.com/Aravindkumarj/ford_test.git',
-        rollback: true,
+        rollback: false
       )
   }
   stage('Unit Test'){
