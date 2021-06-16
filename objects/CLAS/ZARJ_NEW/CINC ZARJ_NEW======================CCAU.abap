@@ -27,8 +27,9 @@ class zarj_Test definition for testing
 
     methods: deposit for testing.
     methods: set_Balance for testing.
-    methods: withdraw_success for testing.
-    methods: withdraw_fail for testing.
+*    methods: withdraw_success for testing.
+    methods: withdraw for testing.
+*    methods: withdraw_fail for testing.
 endclass.       "zarj_Test
 
 class zarj_new definition local friends zarj_test.
@@ -36,7 +37,14 @@ class zarj_Test implementation.
 
   method deposit.
 
-* WRITE 'Hello world'.
+    DATA: TAMOUNT TYPE DMBTR VALUE '1000',
+          TBALANCE TYPE DMBTR VALUE '1000'.
+
+    DATA TARJ TYPE REF TO ZARJ_NEW.
+    CREATE OBJECT TARJ.
+    TARJ->deposit( TAMOUNT ).
+    CL_AUNIT_ASSERT=>assert_equals( act = TARJ->BALANCE exp = TBALANCE ).
+
 
   endmethod.
 
@@ -48,7 +56,7 @@ class zarj_Test implementation.
   endmethod.
 
 
-  method withdraw_fail.
+  method withdraw.
     DATA: TBALANCE TYPE DMBTR VALUE '0',
           TAMOUNT TYPE DMBTR VALUE '1000'.
 
@@ -59,16 +67,16 @@ class zarj_Test implementation.
 
   endmethod.
 
-  method withdraw_success.
-    DATA: TBALANCE TYPE DMBTR VALUE '-1000',
-          TAMOUNT TYPE DMBTR VALUE '1000'.
-
-    DATA TARJ TYPE REF TO ZARJ_NEW.
-    CREATE OBJECT TARJ.
-    TARJ->withdraw( TAMOUNT ).
-    CL_AUNIT_ASSERT=>assert_equals( act = TARJ->BALANCE exp = TBALANCE ).
-
-  endmethod.
+*  method withdraw_success.
+*    DATA: TBALANCE TYPE DMBTR VALUE '-1000',
+*          TAMOUNT TYPE DMBTR VALUE '1000'.
+*
+*    DATA TARJ TYPE REF TO ZARJ_NEW.
+*    CREATE OBJECT TARJ.
+*    TARJ->withdraw( TAMOUNT ).
+*    CL_AUNIT_ASSERT=>assert_equals( act = TARJ->BALANCE exp = TBALANCE ).
+*
+*  endmethod.
 
 
 endclass.
