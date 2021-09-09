@@ -3,7 +3,7 @@ stage:
         client: '200',
         host: 'http://phlhdr07.phl.sap.corp:8011',
         password: 'Rsbdcos0',
-        repository: 'fordtest3',
+        repository: 'IndiaTgt',
         username: 'I058626'
         
         
